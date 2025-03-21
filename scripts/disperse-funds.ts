@@ -77,7 +77,7 @@ async function main() {
   const totalETH = ethValues.reduce((a, b) => a + b, BigInt(0));
   await (await disperse.disperseEther(testAddresses, values.eth, { value: totalETH })).wait();
 
-  /* // Disperse USDC
+  // Disperse USDC
   console.log("\nDispersing USDC...");
   const totalUSDC = usdcValues.reduce((a, b) => a + b, BigInt(0));
   await (await usdc.approve(disperseAddress, totalUSDC)).wait();
@@ -87,7 +87,7 @@ async function main() {
   console.log("\nDispersing USDT...");
   const totalUSDT = usdtValues.reduce((a, b) => a + b, BigInt(0));
   await (await usdt.approve(disperseAddress, totalUSDT)).wait();
-  await (await disperse.disperseToken(USDT_ADDRESS, testAddresses, values.usdt)).wait(); */
+  await (await disperse.disperseToken(USDT_ADDRESS, testAddresses, values.usdt)).wait();
 
   // Print final balances
   console.log("\nFinal balances:");
